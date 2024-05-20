@@ -5,7 +5,6 @@ import JumboCard from "./JumboCard";
 import Card from "./Card";
 import Footer from "./Footer";
 
-//create your first component
 const Home = () => {
   const textoJumboCard =
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo molestiae accusantium necessitatibus distinctio, natus ut consequatur ex maxime rem officia fugit corrupti.";
@@ -33,6 +32,18 @@ const Home = () => {
         />
       </div>
       <div className="row">
+        {imagenesCard.map((imgUrl) => (
+          <div className="col-12 col-lg-3 mb-4 d-flex justify-content-center">
+            <Card
+              imgUrl={imgUrl}
+              title=" Titulo de la card"
+              textoContent="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum non quisquam nulla! Magni, voluptatem! Ipsum quia porro labore modi!"
+              buttonText="Find Out More!"
+            />
+          </div>
+        ))}
+      </div>
+      {/* <div className="row"> 
         <div className="col-12 col-lg-3 mb-4 d-flex justify-content-center">
           <Card
             imgUrl={imagenesCard[0]}
@@ -65,8 +76,8 @@ const Home = () => {
             buttonText="Find Out More!"
           />
         </div>
-      </div>
-      <Footer brand="4 Geeks Academy" />
+      </div>*/}
+      <Footer brand="4Geeks Academy" />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Card = (props) => {
         <h5 className="card-title"> {props.title} </h5>
         <p className="card-text">{props.textoContent}</p>
       </div>
-      <div className="card-footer">
+      <div className="card-footer d-flex justify-content-center">
         <a href="#" className="btn btn-primary">
           {props.buttonText}
         </a>
